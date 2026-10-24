@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+<defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#0E2A19" stroke-width="1"/>
+  </pattern>
+  <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#00FF41" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#00FF41" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#00FF41" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#00FF41" stop-opacity="0"/>
+    <stop offset="1" stop-color="#00FF41" stop-opacity="0.55"/>
+  </linearGradient>
+  <linearGradient id="fadeR" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#050807"/><stop offset="0.2" stop-color="#050807" stop-opacity="0"/>
+    <stop offset="0.8" stop-color="#050807" stop-opacity="0"/><stop offset="1" stop-color="#050807"/>
+  </linearGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="frame"><rect width="1200" height="320" rx="16"/></clipPath>
+  <clipPath id="hexclip"><rect x="1030" y="44" width="160" height="236"/></clipPath>
+  <clipPath id="typeclip"><rect x="330" y="186" height="30" width="0">
+    <animate attributeName="width" values="0;620;620;0" keyTimes="0;0.35;0.9;1" dur="7s" repeatCount="indefinite"/></rect></clipPath>
+</defs>
+<style>
+  .m{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Liberation Mono','Courier New',monospace}
+  @keyframes j1{0%,90%,100%{transform:translate(0,0)}91%{transform:translate(-5px,2px)}93%{transform:translate(4px,-2px)}95%{transform:translate(-2px,1px)}97%{transform:translate(3px,0)}}
+  @keyframes j2{0%,90%,100%{transform:translate(0,0)}91%{transform:translate(5px,-1px)}93%{transform:translate(-4px,2px)}95%{transform:translate(2px,-1px)}97%{transform:translate(-3px,0)}}
+  @keyframes blink{50%{opacity:0}}
+  .r{animation:j1 3.2s infinite} .c{animation:j2 3.2s infinite}
+  .cur{animation:blink 1s step-end infinite}
+  .pulse{animation:blink 1.6s ease-in-out infinite}
+</style>
+<g clip-path="url(#frame)">
+  <rect width="1200" height="320" fill="#050807"/>
+  <rect width="1200" height="320" fill="url(#grid)" opacity="0.7"/>
+
+  <!-- header strip -->
+  <rect width="1200" height="34" fill="#07120C"/>
+  <line x1="0" y1="34" x2="1200" y2="34" stroke="#0F3D24"/>
+  <circle cx="22" cy="17" r="4" fill="#00FF41" class="pulse"/>
+  <text x="36" y="22" class="m" font-size="12" fill="#00FF41" letter-spacing="2">SECURE CHANNEL ESTABLISHED · TLS 1.3 · SESSION 0x4E5552</text>
+  <text x="1178" y="22" class="m" font-size="12" fill="#FF2A6D" letter-spacing="3" text-anchor="end">CLASSIFIED // EYES ONLY</text>
+
+  <!-- radar -->
+  <g transform="translate(0,8)">
+    <circle cx="170" cy="168" r="100" fill="#03140A" stroke="#00FF41" stroke-opacity="0.45"/>
+    <circle cx="170" cy="168" r="66" fill="none" stroke="#00FF41" stroke-opacity="0.25"/>
+    <circle cx="170" cy="168" r="33" fill="none" stroke="#00FF41" stroke-opacity="0.25"/>
+    <line x1="70" y1="168" x2="270" y2="168" stroke="#00FF41" stroke-opacity="0.2"/>
+    <line x1="170" y1="68" x2="170" y2="268" stroke="#00FF41" stroke-opacity="0.2"/>
+    <path d="M170 168 L270 168 A100 100 0 0 0 240.7 97.3 Z" fill="url(#sweep)">
+      <animateTransform attributeName="transform" type="rotate" from="0 170 168" to="360 170 168" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="205" cy="120" r="4" fill="#00FF41" filter="url(#glow)" opacity="0"><animate attributeName="opacity" values="0;1;0.2;0" dur="4s" begin="0s" repeatCount="indefinite"/></circle><circle cx="120" cy="200" r="4" fill="#00FF41" filter="url(#glow)" opacity="0"><animate attributeName="opacity" values="0;1;0.2;0" dur="4s" begin="1.3s" repeatCount="indefinite"/></circle><circle cx="230" cy="215" r="4" fill="#00FF41" filter="url(#glow)" opacity="0"><animate attributeName="opacity" values="0;1;0.2;0" dur="4s" begin="2.6s" repeatCount="indefinite"/></circle><circle cx="150" cy="105" r="4" fill="#00FF41" filter="url(#glow)" opacity="0"><animate attributeName="opacity" values="0;1;0.2;0" dur="4s" begin="3.4s" repeatCount="indefinite"/></circle>
+    <circle cx="170" cy="168" r="3" fill="#00FF41"/>
+  </g>
+
+  <!-- identity -->
+  <text x="330" y="98" class="m" font-size="15" fill="#4D7A5D">$ identify --target self --verbose</text>
+  <g font-weight="800" font-size="54" letter-spacing="5" class="m">
+    <text x="330" y="160" fill="#FF2A6D" fill-opacity="0.75" class="r">NAQEEB UR REHMAN</text>
+    <text x="330" y="160" fill="#05D9E8" fill-opacity="0.75" class="c">NAQEEB UR REHMAN</text>
+    <text x="330" y="160" fill="#EAFFEF" filter="url(#glow)">NAQEEB UR REHMAN</text>
+  </g>
+  <g clip-path="url(#typeclip)">
+    <text x="330" y="208" class="m" font-size="18" fill="#A8FFB0" letter-spacing="1">SOFTWARE ENGINEER // OFFENSIVE &amp; DEFENSIVE SECURITY</text>
+  </g>
+  <g class="m" font-size="13" letter-spacing="1.5">
+    <rect x="330" y="232" width="128" height="26" rx="4" fill="none" stroke="#05D9E8" stroke-opacity="0.7"/>
+    <text x="394" y="250" fill="#05D9E8" text-anchor="middle">RED TEAM</text>
+    <rect x="468" y="232" width="128" height="26" rx="4" fill="none" stroke="#00FF41" stroke-opacity="0.7"/>
+    <text x="532" y="250" fill="#00FF41" text-anchor="middle">BLUE TEAM</text>
+    <rect x="606" y="232" width="150" height="26" rx="4" fill="none" stroke="#F9C80E" stroke-opacity="0.7"/>
+    <text x="681" y="250" fill="#F9C80E" text-anchor="middle">DETECTION ENG</text>
+    <rect x="766" y="232" width="160" height="26" rx="4" fill="none" stroke="#B794F6" stroke-opacity="0.7"/>
+    <text x="846" y="250" fill="#B794F6" text-anchor="middle">SEC AUTOMATION</text>
+  </g>
+
+  <!-- hex stream -->
+  <line x1="1020" y1="50" x2="1020" y2="280" stroke="#0F3D24"/>
+  <g clip-path="url(#hexclip)">
+    <g><text x="1046" y="0" class="m" font-size="12" fill="#00FF41" fill-opacity="0.32">A5 4D CA 18</text><text x="1046" y="18" class="m" font-size="12" fill="#00FF41" fill-opacity="0.26">25 30 BB 1D</text><text x="1046" y="36" class="m" font-size="12" fill="#00FF41" fill-opacity="0.20">6D 13 2C DE</text><text x="1046" y="54" class="m" font-size="12" fill="#00FF41" fill-opacity="0.41">D6 23 7B 2E</text><text x="1046" y="72" class="m" font-size="12" fill="#00FF41" fill-opacity="0.41">D9 1E 3F 72</text><text x="1046" y="90" class="m" font-size="12" fill="#00FF41" fill-opacity="0.32">1F CB 19 71</text><text x="1046" y="108" class="m" font-size="12" fill="#00FF41" fill-opacity="0.39">17 44 94 D6</text><text x="1046" y="126" class="m" font-size="12" fill="#00FF41" fill-opacity="0.33">49 3C 9D 5C</text><text x="1046" y="144" class="m" font-size="12" fill="#00FF41" fill-opacity="0.22">34 60 BE 31</text><text x="1046" y="162" class="m" font-size="12" fill="#00FF41" fill-opacity="0.48">20 1E 69 FE</text><text x="1046" y="180" class="m" font-size="12" fill="#00FF41" fill-opacity="0.28">DA A0 EE E8</text><text x="1046" y="198" class="m" font-size="12" fill="#00FF41" fill-opacity="0.39">B9 99 7F 5C</text><text x="1046" y="216" class="m" font-size="12" fill="#00FF41" fill-opacity="0.47">7C 29 99 FD</text><text x="1046" y="234" class="m" font-size="12" fill="#00FF41" fill-opacity="0.42">AF E5 93 25</text><text x="1046" y="252" class="m" font-size="12" fill="#00FF41" fill-opacity="0.25">3C D6 54 AF</text><text x="1046" y="270" class="m" font-size="12" fill="#00FF41" fill-opacity="0.38">4D FA D7 14</text><text x="1046" y="288" class="m" font-size="12" fill="#00FF41" fill-opacity="0.18">27 A0 AE B3</text><text x="1046" y="306" class="m" font-size="12" fill="#00FF41" fill-opacity="0.45">FE E9 23 2F</text><text x="1046" y="324" class="m" font-size="12" fill="#00FF41" fill-opacity="0.33">8A F2 21 1F</text><text x="1046" y="342" class="m" font-size="12" fill="#00FF41" fill-opacity="0.47">9E E4 91 C5</text><text x="1046" y="360" class="m" font-size="12" fill="#00FF41" fill-opacity="0.27">B1 0B EC B5</text><text x="1046" y="378" class="m" font-size="12" fill="#00FF41" fill-opacity="0.23">56 3B FC 1E</text><text x="1046" y="396" class="m" font-size="12" fill="#00FF41" fill-opacity="0.34">6F 93 42 7E</text><text x="1046" y="414" class="m" font-size="12" fill="#00FF41" fill-opacity="0.33">CB C8 FE 29</text><text x="1046" y="432" class="m" font-size="12" fill="#00FF41" fill-opacity="0.37">55 E5 CD 8E</text><text x="1046" y="450" class="m" font-size="12" fill="#00FF41" fill-opacity="0.36">46 DC 8E D4</text><text x="1046" y="468" class="m" font-size="12" fill="#00FF41" fill-opacity="0.43">B7 C2 76 4D</text><text x="1046" y="486" class="m" font-size="12" fill="#00FF41" fill-opacity="0.42">2A 5A 4D 76</text><text x="1046" y="504" class="m" font-size="12" fill="#00FF41" fill-opacity="0.22">77 06 F8 5D</text><text x="1046" y="522" class="m" font-size="12" fill="#00FF41" fill-opacity="0.23">86 90 02 4A</text><text x="1046" y="540" class="m" font-size="12" fill="#00FF41" fill-opacity="0.29">D6 BD A3 40</text><text x="1046" y="558" class="m" font-size="12" fill="#00FF41" fill-opacity="0.43">1B E9 C8 CB</text><text x="1046" y="576" class="m" font-size="12" fill="#00FF41" fill-opacity="0.22">CC C9 35 F6</text><text x="1046" y="594" class="m" font-size="12" fill="#00FF41" fill-opacity="0.32">CD 1F 61 22</text><text x="1046" y="612" class="m" font-size="12" fill="#00FF41" fill-opacity="0.41">6A E1 53 38</text><text x="1046" y="630" class="m" font-size="12" fill="#00FF41" fill-opacity="0.50">AE 1A 34 00</text><text x="1046" y="648" class="m" font-size="12" fill="#00FF41" fill-opacity="0.43">4D 33 BA 0D</text><text x="1046" y="666" class="m" font-size="12" fill="#00FF41" fill-opacity="0.32">24 6A C0 4C</text><text x="1046" y="684" class="m" font-size="12" fill="#00FF41" fill-opacity="0.22">81 B1 BA F2</text><text x="1046" y="702" class="m" font-size="12" fill="#00FF41" fill-opacity="0.36">3E 3B F9 EE</text><g transform="translate(0,720)"><text x="1046" y="0" class="m" font-size="12" fill="#00FF41" fill-opacity="0.32">A5 4D CA 18</text><text x="1046" y="18" class="m" font-size="12" fill="#00FF41" fill-opacity="0.26">25 30 BB 1D</text><text x="1046" y="36" class="m" font-size="12" fill="#00FF41" fill-opacity="0.20">6D 13 2C DE</text><text x="1046" y="54" class="m" font-size="12" fill="#00FF41" fill-opacity="0.41">D6 23 7B 2E</text><text x="1046" y="72" class="m" font-size="12" fill="#00FF41" fill-opacity="0.41">D9 1E 3F 72</text><text x="1046" y="90" class="m" font-size="12" fill="#00FF41" fill-opacity="0.32">1F CB 19 71</text><text x="1046" y="108" class="m" font-size="12" fill="#00FF41" fill-opacity="0.39">17 44 94 D6</text><text x="1046" y="126" class="m" font-size="12" fill="#00FF41" fill-opacity="0.33">49 3C 9D 5C</text><text x="1046" y="144" class="m" font-size="12" fill="#00FF41" fill-opacity="0.22">34 60 BE 31</text><text x="1046" y="162" class="m" font-size="12" fill="#00FF41" fill-opacity="0.48">20 1E 69 FE</text><text x="1046" y="180" class="m" font-size="12" fill="#00FF41" fill-opacity="0.28">DA A0 EE E8</text><text x="1046" y="198" class="m" font-size="12" fill="#00FF41" fill-opacity="0.39">B9 99 7F 5C</text><text x="1046" y="216" class="m" font-size="12" fill="#00FF41" fill-opacity="0.47">7C 29 99 FD</text><text x="1046" y="234" class="m" font-size="12" fill="#00FF41" fill-opacity="0.42">AF E5 93 25</text><text x="1046" y="252" class="m" font-size="12" fill="#00FF41" fill-opacity="0.25">3C D6 54 AF</text><text x="1046" y="270" class="m" font-size="12" fill="#00FF41" fill-opacity="0.38">4D FA D7 14</text><text x="1046" y="288" class="m" font-size="12" fill="#00FF41" fill-opacity="0.18">27 A0 AE B3</text><text x="1046" y="306" class="m" font-size="12" fill="#00FF41" fill-opacity="0.45">FE E9 23 2F</text><text x="1046" y="324" class="m" font-size="12" fill="#00FF41" fill-opacity="0.33">8A F2 21 1F</text><text x="1046" y="342" class="m" font-size="12" fill="#00FF41" fill-opacity="0.47">9E E4 91 C5</text><text x="1046" y="360" class="m" font-size="12" fill="#00FF41" fill-opacity="0.27">B1 0B EC B5</text><text x="1046" y="378" class="m" font-size="12" fill="#00FF41" fill-opacity="0.23">56 3B FC 1E</text><text x="1046" y="396" class="m" font-size="12" fill="#00FF41" fill-opacity="0.34">6F 93 42 7E</text><text x="1046" y="414" class="m" font-size="12" fill="#00FF41" fill-opacity="0.33">CB C8 FE 29</text><text x="1046" y="432" class="m" font-size="12" fill="#00FF41" fill-opacity="0.37">55 E5 CD 8E</text><text x="1046" y="450" class="m" font-size="12" fill="#00FF41" fill-opacity="0.36">46 DC 8E D4</text><text x="1046" y="468" class="m" font-size="12" fill="#00FF41" fill-opacity="0.43">B7 C2 76 4D</text><text x="1046" y="486" class="m" font-size="12" fill="#00FF41" fill-opacity="0.42">2A 5A 4D 76</text><text x="1046" y="504" class="m" font-size="12" fill="#00FF41" fill-opacity="0.22">77 06 F8 5D</text><text x="1046" y="522" class="m" font-size="12" fill="#00FF41" fill-opacity="0.23">86 90 02 4A</text><text x="1046" y="540" class="m" font-size="12" fill="#00FF41" fill-opacity="0.29">D6 BD A3 40</text><text x="1046" y="558" class="m" font-size="12" fill="#00FF41" fill-opacity="0.43">1B E9 C8 CB</text><text x="1046" y="576" class="m" font-size="12" fill="#00FF41" fill-opacity="0.22">CC C9 35 F6</text><text x="1046" y="594" class="m" font-size="12" fill="#00FF41" fill-opacity="0.32">CD 1F 61 22</text><text x="1046" y="612" class="m" font-size="12" fill="#00FF41" fill-opacity="0.41">6A E1 53 38</text><text x="1046" y="630" class="m" font-size="12" fill="#00FF41" fill-opacity="0.50">AE 1A 34 00</text><text x="1046" y="648" class="m" font-size="12" fill="#00FF41" fill-opacity="0.43">4D 33 BA 0D</text><text x="1046" y="666" class="m" font-size="12" fill="#00FF41" fill-opacity="0.32">24 6A C0 4C</text><text x="1046" y="684" class="m" font-size="12" fill="#00FF41" fill-opacity="0.22">81 B1 BA F2</text><text x="1046" y="702" class="m" font-size="12" fill="#00FF41" fill-opacity="0.36">3E 3B F9 EE</text></g>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="0 -720" dur="24s" repeatCount="indefinite"/>
+    </g>
+    <rect x="1030" y="44" width="160" height="236" fill="url(#fadeR)"/>
+  </g>
+
+  <!-- footer prompt -->
+  <text x="330" y="296" class="m" font-size="14" fill="#4D7A5D">root@naqeeb:~# <tspan fill="#00FF41" class="cur">█</tspan></text>
+
+  <!-- scanline -->
+  <rect x="0" y="-80" width="1200" height="80" fill="url(#scan)">
+    <animate attributeName="y" from="-80" to="320" dur="3.6s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="16" fill="none" stroke="#123F27"/>
+</g>
+</svg>

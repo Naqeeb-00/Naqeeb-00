@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="28" viewBox="0 0 1200 28">
+<defs><linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#00FF41" stop-opacity="0"/><stop offset="0.5" stop-color="#00FF41" stop-opacity="0.5"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+<filter id="g"><feGaussianBlur stdDeviation="2.5"/></filter></defs>
+<line x1="0" y1="14" x2="1200" y2="14" stroke="url(#l)" stroke-dasharray="2 6"/>
+<g><circle cx="0" cy="14" r="6" fill="#00FF41" filter="url(#g)"/><circle cx="0" cy="14" r="2.5" fill="#EAFFEF"/>
+<animateTransform attributeName="transform" type="translate" from="-20 0" to="1220 0" dur="5s" repeatCount="indefinite"/></g>
+</svg>
