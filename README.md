@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://linkedin.com/in/naqeeb-ur-rehman-27b357351"><img src="https://img.shields.io/badge/LinkedIn-050807?style=for-the-badge&logo=linkedin&logoColor=00FF41"/></a>
-  <a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-050807?style=for-the-badge&logo=gmail&logoColor=00FF41"/></a>
+  <a href="mailto:naqeebrehman0326@gmail.com"><img src="https://img.shields.io/badge/Email-050807?style=for-the-badge&logo=gmail&logoColor=00FF41"/></a>
   <img src="https://komarev.com/ghpvc/?username=Naqeeb-00&style=for-the-badge&color=050807&label=PROFILE+VIEWS&labelColor=0D1F14"/>
 </p>
 
@@ -64,14 +64,14 @@ The tools I use, grouped by the stage of security work they belong to, from scan
 </p>
 
 <p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Naqeeb-00&bg_color=050807&color=4D7A5D&line=00FF41&point=EAFFEF&area=true&area_color=00FF41&hide_border=true&custom_title=Contribution%20Activity"/>
+  <img width="100%" src="https://raw.githubusercontent.com/Naqeeb-00/Naqeeb-00/output/snake.svg" alt="Contribution snake"/>
 </p>
 
 <img src="./divider.svg" width="100%"/>
 
 ## 🤝 Let's Connect
 
-I'm always happy to talk about security, CTFs, detection engineering or interesting projects. Reach out on **[LinkedIn](https://linkedin.com/in/naqeeb-ur-rehman-27b357351)** or by **[email](mailto:YOUR_EMAIL)**.
+I'm always happy to talk about security, CTFs, detection engineering or interesting projects. Reach out on **[LinkedIn](https://linkedin.com/in/naqeeb-ur-rehman-27b357351)** or by **[email](mailto:naqeebrehman0326@gmail.com)**.
 
 <details>
 <summary>🔐 <i>A hidden message for the curious</i></summary>
